@@ -22,7 +22,7 @@ Testing the server and client
 ## PROGRAM:
 
 # echo-server.py
-
+```
 import socket
 
 HOST = "127.0.0.1"  # Standard loopback interface address (localhost)
@@ -40,9 +40,9 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 break
             conn.sendall(data)
 
-
+```
 # echo-client.py
-
+```
 import socket
 
 HOST = "127.0.0.1"  # The server's hostname or IP address
@@ -54,7 +54,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     data = s.recv(1024)
 
 print(f"Received {data!r}")
-
+```
 ## OUTPUT:
 ┌──(kali㉿kali)-[~]
 └─$ python echoserver.py
